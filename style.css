@@ -1,0 +1,33 @@
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+h1{
+    display: block;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+p{
+    color:rgb(223, 255, 191);
+}
+#main{
+    background-color: lightblue;
+}
+.pgsize{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+canvas{
+    top: 0;
+    left: 0;
+    width:100vw;
+    height:100vh;
+
+
+}
+.bgred{
+    
+}
