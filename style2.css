@@ -55,7 +55,7 @@ svg {
   offset-rotate: 0deg;
   animation: travel linear both;
   animation-timeline: scroll(root);
-  --count: 36;
+  --count: 57;
   --travel: 10%;  
   animation-range:
     calc(var(--i) * ((100% - var(--travel)) / (var(--count) - 1)))
