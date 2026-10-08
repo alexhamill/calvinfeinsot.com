@@ -1,0 +1,79 @@
+body{
+    font-family: "Isometra", serif;
+    text-align: center;
+    margin: 0;
+}
+h1{
+    font-size: 5em;
+    color: black;
+    margin-bottom: 0;
+}
+#header{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    margin-left:auto;
+    margin-right: auto;
+}
+#nineteen{
+    margin-top: auto;
+}
+body {
+  margin: 0;
+  background: white;
+  height: 5000vh;
+}
+
+#stage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#line {
+  fill: none;
+  stroke: rgb(146, 111, 180);
+  stroke-width: 10;
+}
+
+.photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  offset-rotate: 0deg;
+  animation: travel linear both;
+  animation-timeline: scroll(root);
+  --count: 36;
+  --travel: 10%;  
+  animation-range:
+    calc(var(--i) * ((100% - var(--travel)) / (var(--count) - 1)))
+    calc(var(--i) * ((100% - var(--travel)) / (var(--count) - 1)) + var(--travel));
+}
+
+
+
+@keyframes travel {
+  from { offset-distance: 0%; }
+  to   { offset-distance: 100%; }
+}
+
+#stage svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}

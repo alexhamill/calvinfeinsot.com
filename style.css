@@ -1,19 +1,17 @@
 body{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Isometra", serif;
     text-align: center;
     margin: 0;
 }
 h1{
-    display: block;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
+    font-size: 5em;
+    color: black;
+    margin-bottom: 0;
 }
 p{
-    color:rgb(223, 255, 191);
 }
 #main{
-    background-color: lightblue;
+    background-color: #FFFFFF;
 }
 .pgsize{
     width: 100%;
@@ -30,4 +28,116 @@ canvas{
 #startcanvas{
     width: 100%;
     height: 100%;
+}
+#cake{
+    display: flex;
+    width: 100vw;
+    height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 2s;
+    cursor: url('lighter.png') 16 16, crosshair !important;
+}
+#top{
+    background-color: #f7f6ec;
+    height: 100px;
+    width: 250px;
+    border-radius: 20px 20px 0 0;
+}
+#bottom{
+    background-color: #f7f6ec;
+    height: 200px;
+    width: 400px;
+    border-radius: 20px 20px 20px 20px;
+}
+#candles{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 60px;
+}
+.candle{
+    width: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    
+}
+.flame{
+    width: 100%;
+    height: 20px;
+    background:radial-gradient(circle at 50% 70%, #fff6c9, #ffd24a 55%, #ff8a2a);
+    border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+    animation:flicker .35s ease-in-out infinite alternate;
+    transition: height 0.5s;
+}
+.shaft{
+    background-color: rgb(0, 155, 77);
+    border-radius: 3px 3px 0 0;
+    width: 100%;
+    height: 40px;
+}
+.iceing{
+    background-color: #f6ecf7;
+    height: 30%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.unlit{
+    height: 0 !important;
+}
+
+@keyframes flicker{
+  from{transform:scale(1,1) rotate(-3deg)}
+    to  {transform:scale(.88,1.12) rotate(3deg) translate(0,-.5px)}
+}
+.slideleft{
+    transform: translateX(100vw);
+}
+#header{
+    display: flex;
+    margin-left:auto;
+    margin-right: auto;
+    width: fit-content;
+}
+#alextxt{
+    transition: all 2s;
+}
+.gone{
+    display: none;
+}
+
+#photo1con{
+    
+    left: 0;
+    z-index: 1;
+    transform: translateX(-200vw);
+    transition: all 2s;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+#photo1{
+    height: 100%;
+    width: 100%;
+    margin:auto;
+    object-fit: contain;
+}
+
+.slideright{
+    transform: translateX(0vw) !important;
+    transition: all 2s; 
+}
+.slidedown{
+    transform: translateY(100vw) !important;
+}
+#nineteen{
+    margin-top: auto;
+}
+*{
+    overflow: hidden;
 }

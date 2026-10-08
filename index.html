@@ -5,15 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Isometra&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="startcan" class="pgsize">
         <canvas id="startcanvas"></canvas>
     </div>
+    <div id="photo1con">
+        <img id="photo1" src="photos/img1.jpeg" alt="calvin + alex">
+    </div>
     <div id="main" class="pgsize">
-    <h1>Happy Birthday Calvin!</h1>
-    <p>If you think about it next year you will be 20 but for now your just 19</p>
-    <script src="script.js" defer></script>
+        <div id="header">
+            <h1 >Calvin</h1><h1 id="alextxt" class="gone">&nbsp;and Alex</h1>
+        </div>
+        <p id="caketext"></p>
+            <div id="cake">
+                <div id="candles">
+                </div>
+                <div id="top">
+                    <div class="iceing"></div>
+                </div>
+                <div id="bottom">
+                    <div class="iceing"></div>
+                </div>
+            </div>
+        <script src="Startup.js" defer></script>
+        <script src="Cake.js" defer></script>
     </div>
 </body>
 </html>

@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     function testtext()
     {   
-        const spacing = 1;
+        const spacing = 3;
         ctx.fillStyle = '#000000';
         ctx.font = 'bold 72px arial';
         ctx.fillText('Happy 19th Birthday', 25, 100);
-        ctx.fillText('CALVIN', 250, 200);
+        ctx.fillText('CALVIN !!', 250, 200);
         ctx.font = 'bold 50px arial';
         const { data } = ctx.getImageData(0, 0, maxX, maxY);
         const points = [];
@@ -76,12 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function Animateflowers(){
             for (let i = Math.floor(Math.random()*5); i < 10; i++) {
+                const size = Math.random() * 3 + 4;
             if ( 2 < points.length && stopanimation) {
                 const j = Math.floor(Math.random() * points.length);
-                const size = Math.random() * 3 + 4;
                 drawFlower(points[j].x, points[j].y, size);
                 points.splice(j, 1);
             }else{
+                drawFlower(Math.random() * maxX, Math.random() * maxY, size);
+                // return;
+            }
+            if(!stopanimation){
                 return;
             }
         }
