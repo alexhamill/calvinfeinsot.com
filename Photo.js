@@ -3,6 +3,13 @@ const svg = document.getElementById('svg');
 const line = document.getElementById('line');
 const photos = document.querySelectorAll('.photo');
 
+console.log(document.querySelector("#bar"));
+document.querySelector("#bar").onclick = function(){
+        console.log("going")
+        window.location.href = "index.html";
+        
+    }
+
 function buildPath() {
   const w = stage.clientWidth;
   const h = stage.clientHeight;

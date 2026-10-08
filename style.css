@@ -39,13 +39,13 @@ canvas{
     cursor: url('lighter.png') 16 16, crosshair !important;
 }
 #top{
-    background-color: #f7f6ec;
+    background-color: #fffcd7;
     height: 100px;
     width: 250px;
     border-radius: 20px 20px 0 0;
 }
 #bottom{
-    background-color: #f7f6ec;
+    background-color: #fffcd7;
     height: 200px;
     width: 400px;
     border-radius: 20px 20px 20px 20px;
@@ -82,7 +82,7 @@ canvas{
     height: 40px;
 }
 .iceing{
-    background-color: #f6ecf7;
+    background-color: #ffb7ff;
     height: 30%;
     width: 100%;
     border-radius: 20px 20px 0 0;
