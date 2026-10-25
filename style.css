@@ -1,0 +1,66 @@
+body{
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+#name{
+    font-family: "Shadows Into Light", cursive;
+    margin: auto;
+    max-width: fit-content;
+    font-size: 2.5em;
+    transition: all 1s;
+}
+#name:hover{
+    text-shadow: 10px 10px 0px #888888;
+    font-size: 5em;
+}
+#toolbar{
+    font-family: "Shadows Into Light", cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    width: 100vw;
+    font-size: 1.5em;
+}
+#toolbar>ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#toolbar>ul:hover{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#toolbar>ul, #toolbar>ul>li {
+    float: left;
+    transition: all 1s;
+}
+#toolbar>ul>li:hover {
+  font-size: 1.7em;
+}
+#toolbar>ul>li>a{
+    margin:25px;
+    text-decoration: none;
+    color: inherit;
+    
+}
+#toolbar>ul>li>a:hover{
+    text-decoration: underline;
+    color: rgb(136, 102, 136);
+}
+#con1{
+    font-family: "Changa One", sans-serif;
+    width: 95vw;
+    height: 60vh;
+    margin: 2.5vw;
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5fr 1fr;
+    gap: 16px;
+    overflow: hidden;
+}
+

@@ -6,7 +6,7 @@ const photos = document.querySelectorAll('.photo');
 console.log(document.querySelector("#bar"));
 document.querySelector("#bar").onclick = function(){
         console.log("going")
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
         
     }
 

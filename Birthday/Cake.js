@@ -36,5 +36,5 @@ document.addEventListener("DOMContentLoaded", () => {
         
     }
 
-    addcandels(19);
+    addcandels(4);
 });
