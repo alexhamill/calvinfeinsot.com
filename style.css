@@ -4,14 +4,14 @@ body{
     margin: 0;
     padding: 0;
 }
-#name{
+.head{
     font-family: "Shadows Into Light", cursive;
     margin: auto;
     max-width: fit-content;
     font-size: 2.5em;
     transition: all 1s;
 }
-#name:hover{
+.head:hover{
     text-shadow: 10px 10px 0px #888888;
     font-size: 5em;
 }
@@ -49,18 +49,23 @@ body{
 }
 #toolbar>ul>li>a:hover{
     text-decoration: underline;
-    color: rgb(136, 102, 136);
+    color: #6a0000;
 }
 #con1{
     font-family: "Changa One", sans-serif;
     width: 95vw;
-    height: 60vh;
+    height: 70vh;
     margin: 2.5vw;
     display: grid;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 5fr 1fr;
+    grid-template-rows: 3fr 2fr;
     gap: 16px;
     overflow: hidden;
 }
-
+.thinfont{
+    font-family: 'Times New Roman', Times, serif;
+}
+.thinfont>li>a{
+    color: inherit;
+}

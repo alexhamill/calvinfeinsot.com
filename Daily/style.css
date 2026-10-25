@@ -1,0 +1,27 @@
+#maincon{
+    height: 80vh;
+    width: 95vw;
+    background-color: white;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: flex;
+}
+.daycon{
+    height: 80%;
+    width: 40vw;
+    min-width: 40vw;
+    background-color: rgb(209, 210, 209);
+    margin: auto 3% auto 3%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px #888888;
+    padding: 2%;
+}
+.gname{
+    color: black;
+    margin: auto;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
