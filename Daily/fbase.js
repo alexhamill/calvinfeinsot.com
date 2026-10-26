@@ -37,15 +37,17 @@ window.saveSettings = saveSettings;
 
 function makeblock(game){
     console.log(game);
+    const max = game.MaxScore ?? "";
+    const scoreLow = game.ScoreLow ?? false;
     const block = 
     `<div class="daycon">
-            <div class="setdiv"><i class="material-icons setcon">settings</i>
+            <div class="setdiv open"><i class="material-icons setcon">settings</i>
             <div class="form">
                 <form>
                 <label for="maxscore-${game.id}" >Max Score:</label>
-                <input type="text" id="maxscore-${game.id}"></input>
+                <input type="text" id="maxscore-${game.id}" placeholder="-1 for no max" value="${max}"></input>
                 <br>
-                <input type="checkbox" id="ScoreLow-${game.id}"></input>
+                <input type="checkbox" id="ScoreLow-${game.id}" ${scoreLow ? "checked" : ""}></input>
                 <label for="ScoreLow-${game.id}">Scoring Low is Better</label>
                 <br>
                 <input type="button" value="Save" onclick="saveSettings('${game.id}')">
