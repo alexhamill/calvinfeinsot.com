@@ -1,23 +1,49 @@
 #maincon{
-    height: 80vh;
+    height: 90vh;
     width: 95vw;
-    background-color: white;
+    /* background-color: white; */
     margin: auto;
     overflow-y: hidden;
     overflow-x: scroll;
-    display: flex;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    gap: 20px;
 }
 .daycon{
-    height: 80%;
-    width: 40vw;
-    min-width: 40vw;
-    background-color: rgb(209, 210, 209);
-    margin: auto 3% auto 3%;
-    border-radius: 10px;
-    box-shadow: 10px 10px 0px #888888;
+    height: 100%;
+    width: 20vw;
+    min-width: 20vw;
+    /* background-color: rgb(209, 210, 209); */
+    /* margin: auto 3% auto 3%; */
+    /* border-radius: 10px; */
+    /* box-shadow: 10px 10px 0px #888888; */
     padding: 2%;
     overflow: hidden;
+    /* background-color: #aeac9f; */
+    border-left: 1px;
+    border-top: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-color: black;
+    border-style: solid;
+    box-shadow: inset 0 0 90px rgba(90, 70, 40, .4);
+
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'><filter id='r'><feTurbulence type='fractalNoise' baseFrequency='.035' numOctaves='5' seed='3' result='n'/><feDisplacementMap in='SourceGraphic' in2='n' scale='16' xChannelSelector='R' yChannelSelector='G'/></filter><rect x='2%25' y='2%25' width='96%25' height='96%25' fill='black' filter='url(%23r)'/></svg>") 0 0 / 100% 100% no-repeat;
+            mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'><filter id='r'><feTurbulence type='fractalNoise' baseFrequency='.035' numOctaves='5' seed='3' result='n'/><feDisplacementMap in='SourceGraphic' in2='n' scale='16' xChannelSelector='R' yChannelSelector='G'/></filter><rect x='2%25' y='2%25' width='96%25' height='96%25' fill='black' filter='url(%23r)'/></svg>") 0 0 / 100% 100% no-repeat;
 }
+/* #maincon > .daycon:nth-child(1){
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+#maincon > .daycon:nth-child(3n+3){
+} */
+
 .gname{
     color: black;
     margin: auto;
@@ -50,3 +76,40 @@ a{
     background-color: rgb(170, 165, 165);
 }
 
+.peoplecon{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.Alex{
+    width: 100%;
+    height: 100%;
+    border-right: black 1px solid;
+    
+}
+
+.Calvin{
+    width: 100%;
+    height: 100%;
+}
+
+.playedtoday{
+    padding: .3em;
+    display: flex;
+    align-items: center;   /* vertically centers icon and text */
+    gap: 8px;  
+}
+.playedtoday:hover{
+    background-color: green;
+}
+.playedtoday>p{
+    vertical-align: text-top;
+}
+
+.playedtoday>p>i{
+    font-size: 1em;
+    vertical-align:baseline;
+}

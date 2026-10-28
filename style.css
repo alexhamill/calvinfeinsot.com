@@ -17,12 +17,13 @@ body{
 }
 #toolbar{
     font-family: "Shadows Into Light", cursive;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     margin-top: 10px;
     width: 100vw;
     font-size: 1.5em;
+    /* border-bottom: black 1px solid; */
 }
 #toolbar>ul{
     margin: 0;

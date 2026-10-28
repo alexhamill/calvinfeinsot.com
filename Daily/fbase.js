@@ -40,8 +40,8 @@ function makeblock(game){
     const max = game.MaxScore ?? "";
     const scoreLow = game.ScoreLow ?? false;
     const block = 
-    `<div class="daycon">
-            <div class="setdiv open"><i class="material-icons setcon">settings</i>
+    `<div class="daycon newspaper">
+            <div class="setdiv"><i class="material-icons setcon">settings</i>
             <div class="form">
                 <form>
                 <label for="maxscore-${game.id}" >Max Score:</label>
@@ -55,24 +55,19 @@ function makeblock(game){
             </div>
             </div>
             <a href="${game.Link}" target="_blank" rel="noopener"><h1 class="gname">${game.Name}!</h1></a>
-            <div class="ac">
-                <h2>All Time High Score:</h2>
-                
-            </div>
-            <div class="alex">
-                <h2 style="text-align: center;">Alex</h2>
-                <p>High Score:</p>
-                <p>Today's Score:</p>
-            </div>
-            <div class="calvin">
-                <h2 style="text-align: center;">Calvin</h2>
-                <p>High Score:</p>
-                <p>Today's Score:</p>
+            <div class="peoplecon">
+                <div class="Alex">
+                    <p>Alex</p>
+                    <div class="playedtoday"><p><i class="material-icons">check_box_outline_blank</i>&nbsp;&nbsp;&nbsp;Played today</p></div>
+                </div>
+                <div class="Calvin">
+                    <p>Calvin</p>
+                    <div class="playedtoday"><p><i class="material-icons">check_box_outline_blank</i>&nbsp;&nbsp;&nbsp;Played today</p></div>
+                </div>
             </div>
         </div>`
     document.querySelector("#maincon").innerHTML += block;
 }
-
 
 
 
