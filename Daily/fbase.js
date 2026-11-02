@@ -32,7 +32,6 @@ async function getplayed(db){
 async function saveSettings(gameId) {
     const maxScore = document.querySelector(`#maxscore-${gameId}`).value;
     const scoreLow = document.querySelector(`#ScoreLow-${gameId}`).checked;
-    console.log(maxScore,scoreLow);
     await updateDoc(doc(db, "Games", gameId), {
         MaxScore: maxScore,
         ScoreLow: scoreLow,
@@ -41,7 +40,6 @@ async function saveSettings(gameId) {
 window.saveSettings = saveSettings;
 
 function makeblock(game){
-    console.log(game);
     const max = game.MaxScore ?? "";
     const scoreLow = game.ScoreLow ?? false;
     const block = 
@@ -82,9 +80,7 @@ async function init() {
         makeblock(element);
     });
     const settings = document.querySelectorAll(".setcon")
-    console.log(settings);
     settings.forEach(element => {
-        console.log(element);
         element.addEventListener("click", (e) => {
             e.currentTarget.parentElement.classList.toggle("open");
         });
@@ -101,7 +97,21 @@ async function init() {
         });
             
     });
-    updateplayed()
+    document.querySelector("#plus").addEventListener("click", () => {
+        console.log("Test")
+        document.querySelector("#addscreen").style.transform = "scale(1)"
+    });
+    const reorderonclick = document.querySelectorAll(".reoderonclick")
+    reorderonclick.forEach(trigger => {
+        trigger.addEventListener("click",(e) =>{
+            reorderbycomplete();
+        });
+    });
+
+
+
+    updateplayed();
+    reorderbycomplete();
 }
 
 async function saveplayed(currentTarget){
@@ -122,6 +132,7 @@ async function saveplayed(currentTarget){
             {merge: true}
         );
     }
+    setTimeout(reorderbycomplete, 1000);
     
 }
 
@@ -137,13 +148,26 @@ async function updateplayed() {
       .map(([game]) => game);
 
     document.querySelectorAll(".playedtoday").forEach(div => {
-        console.log(div);
       if (playerDoc.id === div.dataset.player && played.includes(div.dataset.id)) {
-        console.log("working");
         div.querySelector("i").textContent = "check_box";
       }
     });
   });
+  reorderbycomplete();
 }
 
+function reorderbycomplete() {
+    const maincon = document.querySelector("#maincon");
+    const user = document.querySelector("#user").checked ? "Alex" : "Calvin";
+    const plus = maincon.querySelector("#plus");
+    if (plus) plus.remove();
+    maincon.querySelectorAll(".daycon").forEach(child => {
+        const player = child.querySelector(`.${user}`);
+        if (player?.querySelector("i")?.textContent === "check_box") {
+            maincon.append(child);
+        }
+    })
+        
+    if (plus) maincon.append(plus);
+}
 init();

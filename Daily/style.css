@@ -105,6 +105,7 @@ a{
     transform-origin: center;
     transform-style: preserve-3d;
     transition: transform .6s ease;
+    cursor: pointer;
 }
 .playedtoday:active{
     transform: perspective(800px) rotateY(180deg);
@@ -120,4 +121,51 @@ a{
 .big{
     transform-style: preserve-3d;
     transform: perspective(800px) rotateY(360deg) scale(2);
+}
+#addnew{
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    background-color: white;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+#plus{
+    transition: all 1s !important;
+    height: 100%;
+    width: 20vw;
+    min-width: 20vw;
+    background-color: white;
+    border-radius: 10px;
+    opacity: .2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    cursor:help;
+}
+
+#plus::before{
+    content: "+";
+    color: black;
+}
+#addscreen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    transform: scale(.0001);
+    transition: all 1s;
+}
+
+#addbox{
+    width: 70vh;
+    height: 70vh;
+    background-color: white;
+    border-radius: 2em;
+    margin: auto;
 }

@@ -1,0 +1,59 @@
+.switch {
+  font-size: 17px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-family: "Shadows Into Light", cursive;
+  display: inline-block;
+  width: 7em;
+  height: 2em;
+  user-select: none;
+}
+
+/* Hide default HTML checkbox */
+.switch .cb {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #373737;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.toggle > .left {
+  display: flex;
+  width: 45%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.toggle > .right {
+  display: flex;
+  width: 45%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  left: -.7em;
+  width: 45%;
+  height: 1.2em;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  transition: transform 150ms ease;
+}
+
+.switch input:checked + .toggle::before {
+  transform: translateX(5.3em);
+}
